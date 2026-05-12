@@ -3,11 +3,12 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Pablo González Yanelli — The Bridge Builder</title>
+<title>pgyanelli.dev</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=Barlow+Condensed:wght@200;300;400;600;700&display=swap" rel="stylesheet" />
+<link rel="shortcut icon" href="./images/logo_pgy.png" type="image/x-icon">
 
-<link rel="stylesheet" href="./css/main.css">
+<link rel="stylesheet" href="./css/main_2.css">
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
@@ -26,7 +27,10 @@
 
 <!-- Navigation -->
 <nav id="main-nav">
-  <div class="nav-logo">PGYanelli.dev</div>
+  <div class="nav-logo">
+    <img src="./images/logo_pgy.png" alt="Logo PGY" class="logo-img" />
+    <span class="logo-text">pgyanelli<span class="text-cyan">.dev</span></span>
+  </div>
   <ul class="nav-links">
     <li><a href="#spark">Origen</a></li>
     <li><a href="#core">Stack</a></li>
@@ -50,7 +54,7 @@
   <a href="#vision">Visión</a>
   <a href="#impact">Proyectos</a>
   <a href="#human">Contacto</a>
-  <span class="menu-footer">pgyanelli.dev — The Bridge Builder</span>
+  <span class="menu-footer">pgyanelli.dev</span>
 </div>
  
 <!-- Back to top -->
@@ -61,7 +65,7 @@
 <!-- ─── SECTION 0: THE IGNITION ─── -->
 <section id="ignition">
   <div id="ignition-inner">
-    <span class="ignition-label">pgyanelli.dev — The Bridge Builder</span>
+    <span class="ignition-label">pgyanelli.dev</span>
 
     <div id="led-container" title="Encender">
       <svg id="led-svg" width="120" height="120" viewBox="0 0 120 120">
@@ -105,7 +109,7 @@
       </svg>
     </div>
 
-    <p class="ignition-text">"Toda solución,<br>inicia con una idea."</p>
+    <p class="ignition-text">"Toda solución,<br>nace con una idea."</p>
     <p class="ignition-sub">— Haz clic en el LED para comenzar</p>
   </div>
 
@@ -138,7 +142,7 @@
       Formado como <em style="color:var(--cyan)">Técnico en Equipos e Instalaciones Electromecánicas</em> en la Escuela de Educación Técnica, aprendí a dominar la fuerza física antes que la lógica digital.
     </p>
     <p class="spark-body">
-      Mi <em style="color:var(--cyan)">"Momento Eureka"</em> llegó en 2017: Con un Arduino Nano y un módulo Bluetooth HC-05, transformé un viejo auto a control remoto en uno moderno controlado por mi Smartphone.
+      Mi <em style="color:var(--cyan)">"Momento Eureka"</em> llegó en 2017: Con un Arduino UNO y un módulo Bluetooth HC-05, transformé un viejo auto a control remoto en uno moderno controlado por mi Smartphone.
     </p>
     <p class="spark-body">
       Fue el primer puente que tendí entre lo físico y lo digital. Ese día comprendí que mi carrera no se trataría de elegir entre hardware o software, sino de perfeccionar la conexión entre ambos. Desde entonces, convierto objetos en datos y datos en soluciones.
@@ -154,9 +158,9 @@
   </div>
 
   <!-- Arduino illustration -->
-  <svg class="arduino-visual" viewBox="0 0 320 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!--<svg class="arduino-visual" viewBox="0 0 320 240" fill="none" xmlns="http://www.w3.org/2000/svg">
     <rect x="30" y="40" width="200" height="160" rx="8" fill="#0f172a" stroke="#06b6d4" stroke-width="1.5"/>
-    <!-- Pin headers -->
+    
     <g fill="#1e293b" stroke="#06b6d4" stroke-width="0.8">
       <rect x="50" y="36" width="8" height="10" rx="1"/>
       <rect x="62" y="36" width="8" height="10" rx="1"/>
@@ -167,46 +171,62 @@
       <rect x="122" y="36" width="8" height="10" rx="1"/>
       <rect x="134" y="36" width="8" height="10" rx="1"/>
     </g>
-    <!-- Chip -->
+    
     <rect x="95" y="95" width="60" height="50" rx="3" fill="#0a1628" stroke="#334155" stroke-width="1"/>
     <text x="125" y="124" font-family="DM Mono, monospace" font-size="8" fill="#06b6d4" text-anchor="middle">ATmega</text>
     <text x="125" y="134" font-family="DM Mono, monospace" font-size="7" fill="#64748b" text-anchor="middle">328P</text>
-    <!-- USB port -->
+    
     <rect x="230" y="100" width="20" height="40" rx="2" fill="#1e293b" stroke="#334155" stroke-width="1"/>
-    <!-- LED indicators -->
+    
     <circle cx="60" cy="80" r="5" fill="#06b6d4" opacity="0.8" filter="url(#glow-filter)"/>
     <circle cx="75" cy="80" r="5" fill="#1e4d28" stroke="#16a34a" stroke-width="1"/>
-    <!-- Traces -->
+    
     <path d="M95 120 H60 V160 H180 V145 H155" stroke="#06b6d4" stroke-width="0.5" opacity="0.4"/>
     <path d="M155 95 V70 H200 V160 H230 V120" stroke="#06b6d4" stroke-width="0.5" opacity="0.3"/>
     <path d="M60 80 H40 V190 H220 V170 H210" stroke="#06b6d4" stroke-width="0.5" opacity="0.2"/>
-    <!-- HC-05 Module -->
+    
     <rect x="50" y="155" width="50" height="28" rx="2" fill="#0a1628" stroke="#06b6d4" stroke-width="1"/>
     <text x="75" y="167" font-family="DM Mono" font-size="6" fill="#06b6d4" text-anchor="middle">HC-05</text>
     <text x="75" y="177" font-family="DM Mono" font-size="5" fill="#64748b" text-anchor="middle">BLUETOOTH</text>
     <circle cx="100" cy="168" r="4" fill="#1e293b" stroke="#06b6d4" stroke-width="0.8" opacity="0.6"/>
-  </svg>
+  </svg>-->
 
-  <div class="sec-year">2017</div>
+  <div class="arduino-photos">
+    <div class="photo-container main-photo">
+      <img src="./images/prototipo.jpeg" alt="Prototipo Auto Arduino 2017">
+      <div class="photo-overlay"></div>
+      <span class="photo-label">FIG 01. HARDWARE_CORE</span>
+    </div>
+    <div class="photo-container sub-photo">
+      <img src="./images/presentacion.jpeg" alt="Presentación Auto Arduino 2017">
+      <div class="photo-overlay"></div>
+      <span class="photo-label">FIG 02. PRESENTATION</span>
+    </div>
+  </div>
+
 </section>
 
 <!-- ─── SECTION 2: THE CORE ─── -->
 <section id="core">
   <div class="core-grid">
     <div class="core-left">
-      <p class="sec-label">— 02 / The Core — Bigapps S.R.L. · 2021–Presente</p>
+      <p class="sec-label">— 02 / El Núcleo · 2021–2026</p>
       <div class="divider"></div>
       <h2 class="core-heading">Arquitectura<br>que <em>escala.</em></h2>
       <p class="core-body">
-        Como <em style="color:var(--cyan)">FullStack Developer & Infrastructure Specialist</em> en Bigapps S.R.L., construyo y mantengo sistemas de producción de alto impacto. Lideré el desarrollo de plataformas ERP de gestión (Stock, Ventas, Cajas, Afiliados) y diseñé la plataforma de <em style="color:var(--cyan)">Miami Ride Rent A Car</em>, logrando la automatización completa del 100% de reservas y pagos con una reducción del 30% en tiempos de procesamiento.
+        Mi trayectoria se define por la capacidad de transformar requerimientos de negocio complejos en arquitecturas tecnológicas escalables. Con <em style="color:var(--cyan)">más de 5 años de experiencia</em>, mi enfoque ha evolucionado desde el desarrollo de software puro hacia la orquestación integral de infraestructura IT.
       </p>
       <p class="core-body">
-        Administro una infraestructura Linux con <em style="color:var(--cyan)">+20 contenedores Docker</em> en servidores cloud, manteniendo una disponibilidad del 99.9% en producción. También implementé integración NFC en apps móviles para identificación segura de clientes.
+        Durante mi etapa como <em style="color:var(--cyan)">FullStack Developer & Infrastructure Specialist</em>, consolidé mi dominio en ecosistemas de alta demanda. Lideré y participé en el desarrollo de plataformas ERP y automatización de tareas en diferentes proyectos, logrando reducir los tiempos de procesamiento en un 30%.
+        Mi "Core" actual reside en la intersección de la eficiencia operativa y la robustez técnica.
+      </p>
+      <p class="core-body">
+        Hoy, gestiono entornos Linux de alta disponibilidad, orquestando más de 20 contenedores Docker. Mi metodología integra el desarrollo multiplataforma en .NET MAUI con la seguridad de protocolos NFC y la agilidad de backends en Python, asegurando que cada nodo del sistema, desde el hardware hasta la nube, funcione en perfecta sincronía.
       </p>
 
       <div class="stack-grid">
         <div class="stack-item">
-          <div class="stack-name">Python / Web2py</div>
+          <div class="stack-name">Python</div>
           <div class="stack-desc">Backend MVC & APIs RESTful</div>
         </div>
         <div class="stack-item">
@@ -227,7 +247,7 @@
         </div>
         <div class="stack-item">
           <div class="stack-name">Linux (Debian/Ubuntu)</div>
-          <div class="stack-desc">Infra cloud & proxies Nginx</div>
+          <div class="stack-desc">Infra Cloud & Proxies Nginx</div>
         </div>
       </div>
 
@@ -269,7 +289,7 @@
 
         <!-- Layer 2 -->
         <circle cx="80" cy="160" r="24" class="node-circle"/>
-        <text x="80" y="156" class="node-label">MVC</text>
+        <text x="80" y="163" class="node-label">MVC</text>
 
         <circle cx="260" cy="160" r="24" class="node-circle"/>
         <text x="260" y="156" class="node-label">.NET</text>
@@ -287,7 +307,7 @@
 
         <!-- Base -->
         <circle cx="170" cy="370" r="28" class="node-circle" stroke-width="1.5"/>
-        <text x="170" y="378" class="node-label">Cloud</text>
+        <text x="170" y="373" class="node-label">Cloud</text>
 
         <!-- Pulse on center -->
         <circle cx="170" cy="60" r="38" fill="none" stroke="#06b6d4" stroke-width="0.5" opacity="0.3">
@@ -308,12 +328,11 @@
   <div class="work-intro">
     <p class="sec-label">— 02.5 / The Work — Experiencia Laboral</p>
     <div class="divider"></div>
-    <h2 class="work-heading">Donde el código<br><em>encontró producción.</em></h2>
-    <p class="work-sub">Cada rol, un conjunto de problemas reales. Cada solución, una métrica que lo demuestra.</p>
+    <h2 class="work-heading">Donde el desarrollo<br><em>se convirtió en producción.</em></h2>
+    <p class="work-sub">Cada tarea, un conjunto de problemas reales. Cada solución, una métrica que lo demuestra.</p>
   </div>
 
   <div class="timeline">
-
     <!-- JOB 1: BIGAPPS -->
     <div class="tl-item">
       <div class="tl-spine">
@@ -326,7 +345,7 @@
             <div class="tl-role">FullStack Developer & Infrastructure Specialist</div>
             <div class="tl-company">Bigapps S.R.L.</div>
           </div>
-          <div class="tl-period">Feb 2021 — Presente</div>
+          <div class="tl-period">Feb 2021 — Mar 2026</div>
         </div>
         <p class="tl-body">
           Especializado en ecosistemas Python con arquitecturas MVC, desarrollo móvil con .NET MAUI y administración de infraestructura Linux en producción.
@@ -334,14 +353,14 @@
         <div class="tl-achievements">
           <div class="achievement">
             <div class="ach-metric">100%</div>
-            <div class="ach-desc">Automatización de reservas y pagos en la plataforma <em>Miami Ride Rent A Car</em></div>
+            <div class="ach-desc">Automatización de procesos repetitivos</div>
           </div>
           <div class="achievement">
             <div class="ach-metric">−30%</div>
-            <div class="ach-desc">Reducción en tiempo de procesamiento de reservas</div>
+            <div class="ach-desc">Reducción en tiempo de procesos</div>
           </div>
           <div class="achievement">
-            <div class="ach-metric">+20</div>
+            <div class="ach-metric">+40</div>
             <div class="ach-desc">Contenedores Docker orquestados en servidores cloud</div>
           </div>
           <div class="achievement">
@@ -350,19 +369,18 @@
           </div>
         </div>
         <div class="tl-bullets">
-          <div class="tl-bullet">▸ Lideré el desarrollo de sistemas ERP/Gestión (Stock, Ventas, Cajas, Afiliados) optimizando el flujo de caja empresarial.</div>
-          <div class="tl-bullet">▸ Implementé integración NFC en apps móviles mejorando seguridad y velocidad en identificación de clientes.</div>
-          <div class="tl-bullet">▸ Administro infraestructura Linux con Nginx como proxy inverso sobre Debian/Ubuntu en cloud.</div>
+          <div class="tl-bullet">▸ Lideré y participé en el desarrollo de sistemas ERP/Gestión (Stock, Ventas, Cajas, Afiliados) optimizando el flujo de caja empresarial.</div>
+          <div class="tl-bullet">▸ Implementé integración NFC en apps móviles mejorando seguridad y velocidad en identificación de objetos y/o clientes.</div>
+          <div class="tl-bullet">▸ Administré infraestructura Linux con Nginx como proxy inverso sobre Debian/Ubuntu en entorno cloud.</div>
         </div>
         <div class="tl-tags">
-          <span class="tag">Python / Web2py</span>
+          <span class="tag">Python / MVC</span>
           <span class="tag">.NET MAUI</span>
           <span class="tag">Docker</span>
-          <span class="tag">PostgreSQL</span>
+          <span class="tag">SQL</span>
           <span class="tag">Linux</span>
           <span class="tag">Nginx</span>
           <span class="tag">NFC</span>
-          <span class="tag">JavaScript</span>
         </div>
       </div>
     </div>
@@ -382,7 +400,7 @@
           <div class="tl-period">Oct 2024 — Presente</div>
         </div>
         <p class="tl-body">
-          Arquitecto de soluciones IoT que integran desarrollo de software con el mundo físico. Liderazgo en I+D de domótica y automatización industrial con ESP32/ESP8266.
+          Arquitecto de soluciones IoT que integran desarrollo de software con el mundo físico. Liderazgo en I+D de domótica y automatización con ESP32/ESP8266/Raspberry Pi.
         </p>
         <div class="tl-achievements">
           <div class="achievement">
@@ -395,16 +413,17 @@
           </div>
           <div class="achievement">
             <div class="ach-metric">+5</div>
-            <div class="ach-desc">Clientes activos en el ecosistema SaaS Mercatto</div>
+            <div class="ach-desc">Clientes activos en el ecosistema SaaS MercattoApp</div>
           </div>
         </div>
         <div class="tl-bullets">
-          <div class="tl-bullet">▸ Creador del ecosistema Mercatto: plataforma SaaS multi-tenant para retail e indumentaria.</div>
           <div class="tl-bullet">▸ Sistema de rastreo en tiempo real para flota de colectivos con optimización logística medible.</div>
-          <div class="tl-bullet">▸ Prototipado de sistemas embebidos con ESP32/ESP8266 y MicroPython para automatización industrial.</div>
+          <div class="tl-bullet">▸ Prototipado de sistemas embebidos con ESP32/ESP8266/Raspberri Pi y MicroPython/C/C++ para automatización industrial.</div>
         </div>
         <div class="tl-tags">
           <span class="tag">ESP32/ESP8266</span>
+          <span class="tag">Raspberry PI</span>
+          <span class="tag">Arduino</span>
           <span class="tag">MicroPython</span>
           <span class="tag">IoT</span>
           <span class="tag">GPS Tracking</span>
@@ -431,15 +450,15 @@
           Desarrollador en SATTEA, aplicación web para la digitalización de herramientas terapéuticas basadas en pictogramas. Trabajo interdisciplinario con profesionales de la salud bajo metodología SCRUM.
         </p>
         <div class="tl-bullets">
-          <div class="tl-bullet">▸ Desarrollé el backend con PHP y MySQL con arquitectura capaz de soportar múltiples usuarios simultáneos.</div>
-          <div class="tl-bullet">▸ Completé todas las Sprints en tiempo en un equipo de 5 profesionales de salud e informática.</div>
-          <div class="tl-bullet">▸ Primer proyecto real de impacto social: herramientas digitales para equipos de salud pediátrica.</div>
+          <div class="tl-bullet">▸ Participé en el desarrollo con PHP y MySQL con arquitectura capaz de soportar múltiples usuarios simultáneos.</div>
+          <div class="tl-bullet">▸ Metodología SCRUM en conjunto con profesionales de salud e informática.</div>
+          <div class="tl-bullet">▸ Primer proyecto real de impacto social: herramientas digitales para equipos de salud terapéutica.</div>
         </div>
         <div class="tl-tags">
-          <span class="tag">PHP</span>
+          <span class="tag">PHP/Laravel</span>
           <span class="tag">MySQL</span>
           <span class="tag">SCRUM</span>
-          <span class="tag">JavaScript</span>
+          <span class="tag">Web Development</span>
           <span class="tag">Salud Digital</span>
         </div>
       </div>
@@ -463,22 +482,22 @@
   </svg>
 
   <div class="vision-content">
-    <p class="sec-label">— 03 / The Vision — IoTechLabs · Oct 2024–Presente</p>
+    <p class="sec-label">— 03 / The Vision</p>
     <div class="divider"></div>
     <h2 class="vision-heading">El mundo físico<br>habla. Yo<br><em>lo traduzco.</em></h2>
     <p class="vision-body">
-      Como <em style="color:var(--cyan)">Desarrollador FullStack & IoT en IoTechLabs</em>, lidero la I+D de soluciones que conectan hardware embebido con plataformas cloud. Diseñé e implementé un sistema de gestión de entradas para Ares Group con latencia de respuesta <em style="color:var(--cyan)">&lt;200ms</em> bajo transacciones simultáneas por evento.
+      Como <em style="color:var(--cyan)">Desarrollador FullStack & IoT en IoTechLabs</em>, lidero la I+D de soluciones que conectan hardware embebido con plataformas cloud. Diseñé e implementé un sistema de gestión de entradas para Ares Group con latencia de respuesta <em style="color:var(--cyan)">pequeñas</em> bajo transacciones simultáneas por evento.
     </p>
     <p class="vision-body">
-      Desarrollé un sistema de rastreo en tiempo real para flotas de transporte que resultó en una <em style="color:var(--cyan)">reducción del 15% en costos de inactividad</em>. Hoy, con ESP32/ESP8266 y MicroPython, prototipo ecosistemas de domótica y automatización industrial que serán los nodos de la próxima generación de infraestructura conectada.
+      Desarrollé un sistema de rastreo en tiempo real para flotas de transporte que resultó en una <em style="color:var(--cyan)">reducción del 15% en costos de inactividad</em> y eficiencia en el tiempo de espera de los pasajeros. Hoy, con diferentes dispositivos, prototipo ecosistemas de domótica y automatización que serán los nodos de la próxima generación de infraestructura conectada.
     </p>
 
     <div class="vision-pillars">
       <div class="pillar">
         <span class="pillar-icon">⚡</span>
         <div>
-          <div class="pillar-title">Hardware Embebido · ESP32/ESP8266</div>
-          <p class="pillar-desc">Prototipado y despliegue de sistemas inteligentes con MicroPython. Sensores industriales, automatización de procesos y control remoto en tiempo real.</p>
+          <div class="pillar-title">Hardware Embebido · ESP32/ESP8266/Raspberry Pi/Arduino</div>
+          <p class="pillar-desc">Prototipado y despliegue de sistemas inteligentes. Sensores industriales, automatización de procesos y control remoto en tiempo real.</p>
         </div>
       </div>
       <div class="pillar">
@@ -504,61 +523,58 @@
 <!-- ─── SECTION 4: IMPACT ─── -->
 <section id="impact">
   <div class="impact-intro">
-    <p class="sec-label">— 04 / Impact — Products</p>
+    <p class="sec-label">— 04 / Impact — IoTechLabs Portfolio</p>
     <div class="divider"></div>
-    <h2 class="impact-heading">Software que<br><em>funciona en producción.</em></h2>
-    <p class="impact-sub">Tres productos. Tres industrias. Un mismo principio: tecnología al servicio de operaciones reales.</p>
+    <h2 class="impact-heading">Sistemas con<br><em>impacto real.</em></h2>
+    <p class="impact-sub">Tres verticales de negocio. Un mismo motor: ingeniería de precisión para operaciones de alta demanda.</p>
   </div>
 
   <div class="products-grid">
-    <!-- MercattoApp -->
+    <!-- Mercatto -->
     <div class="product-card">
-      <div class="product-num">01 / SaaS Multi-tenant</div>
-      <h3 class="product-name">Mercatto</h3>
-      <div class="product-type">Retail & Punto de Venta</div>
+      <div class="product-num">01 / SaaS Retail</div>
+      <h3 class="product-name">MercattoApp</h3>
+      <div class="product-type">Ecosistema de Gestión & POS</div>
       <p class="product-desc">
-        Ecosistema SaaS multi-tenant para el sector retail e indumentaria. Punto de venta escalable que hoy provee soluciones a <em style="color:var(--cyan)">+5 clientes activos</em> con gestión de stock, cajas y ventas en tiempo real.
+        Plataforma SaaS multi-tenant diseñada para escalar operaciones de retail e indumentaria. Centraliza stock, cajas y ventas en tiempo real para <em style="color:var(--cyan)">+5 clientes activos</em>, optimizando la toma de decisiones basada en datos.
       </p>
       <div class="product-tags">
         <span class="p-tag">Python</span>
         <span class="p-tag">Multi-tenant</span>
+        <span class="p-tag">SaaS Architecture</span>
         <span class="p-tag">PostgreSQL</span>
-        <span class="p-tag">Docker</span>
-        <span class="p-tag">SaaS</span>
       </div>
       <div class="product-corner"></div>
     </div>
 
-    <!-- Ares Security -->
+    <!-- Ares Group -->
     <div class="product-card">
-      <div class="product-num">02 / IoT + Seguridad</div>
+      <div class="product-num">02 / IoT & Security</div>
       <h3 class="product-name">Ares Group</h3>
-      <div class="product-type">Control de Acceso & Ticketing</div>
+      <div class="product-type">Control de Acceso de Alta Velocidad</div>
       <p class="product-desc">
-        Software de gestión de entradas para eventos con transacciones simultáneas y <em style="color:var(--cyan)">latencia &lt;200ms</em>. Integración NFC para identificación segura y trazabilidad de ingresos en tiempo real.
+        Infraestructura de ticketing y validación masiva con <em style="color:var(--cyan)">latencias menores a 200ms</em>. Implementación de tecnología **NFC** para identificación de alta seguridad y trazabilidad total en eventos de gran concurrencia.
       </p>
       <div class="product-tags">
-        <span class="p-tag">NFC</span>
+        <span class="p-tag">NFC Integration</span>
+        <span class="p-tag">Real-time Data</span>
         <span class="p-tag">.NET MAUI</span>
-        <span class="p-tag">&lt;200ms</span>
-        <span class="p-tag">IoTechLabs</span>
       </div>
       <div class="product-corner"></div>
     </div>
 
-    <!-- Fleet tracking / Miami Ride -->
-    <div class="product-card">
-      <div class="product-num">03 / Logística & Rent A Car</div>
-      <h3 class="product-name">Miami Ride + Fleet</h3>
-      <div class="product-type">Automatización & Tracking</div>
+    <!-- Transporte Cafayate -->
+    <div class="product-card border-cyan">
+      <div class="product-num">03 / Smart City & Logistics</div>
+      <h3 class="product-name">Transporte Cafayate</h3>
+      <div class="product-type">Tracking GPS & Optimización de Flota</div>
       <p class="product-desc">
-        Plataforma de reservas y pagos para Miami Ride Rent A Car con <em style="color:var(--cyan)">automatización del 100%</em> y reducción del 30% en tiempos. Sistema de rastreo de flota en tiempo real que redujo un <em style="color:var(--cyan)">15% los costos de inactividad</em>.
+        Sistema de rastreo en tiempo real para la flota de transporte público. La integración de hardware GPS y lógica de procesamiento logró reducir un <em style="color:var(--cyan)">15% los costos de inactividad</em> y mejorar la eficiencia logística urbana.
       </p>
       <div class="product-tags">
-        <span class="p-tag">GPS Tracking</span>
-        <span class="p-tag">Python</span>
-        <span class="p-tag">Automatización</span>
-        <span class="p-tag">−30% tiempo</span>
+        <span class="p-tag">GPS Telemetry</span>
+        <span class="p-tag">IoT Hardware</span>
+        <span class="p-tag">Python Backend</span>
       </div>
       <div class="product-corner"></div>
     </div>
@@ -567,10 +583,10 @@
 
 <section id="human">
   <div class="human-inner">
-    <p class="human-eyebrow">— 05 / Contacto</p>
+    <p class="sec-label">— 05 / Contacto</p>
     <div class="cta-block">
-      <p class="cta-label">¿Construimos algo juntos?</p>
-      <p class="cta-main">Abierto a consultoría,<br>proyectos y arquitectura de software.</p>
+      <p class="cta-label">¿Construimos el próximo puente?</p>
+      <p class="cta-main">Disponible para consultoría técnica,<br> proyectos de software & IoT.</p>
       <div class="cta-buttons">
         <a href="mailto:pgyanelli@protonmail.com" class="btn-primary">
           ✉ pgyanelli@protonmail.com
@@ -585,434 +601,14 @@
 
 <!-- ─── FOOTER ─── -->
 <footer>
-  <div class="footer-left">© 2025 Pablo González Yanelli — Built with intention.</div>
+  <div class="footer-left">© 2026 Pablo González Yanelli — Built with love.</div>
   <ul class="footer-right">
-    <li><a href="https://github.com/pgyanelli" target="_blank">GitHub</a></li>
-    <li><a href="https://linkedin.com/in/pgyanelli" target="_blank">LinkedIn</a></li>
-    <li><a href="mailto:pablo@pgyanelli.dev">Email</a></li>
+    <li><a href="https://github.com/pgyanelli98" target="_blank">GitHub</a></li>
+    <li><a href="https://linkedin.com/in/pgyanelli-dev" target="_blank">LinkedIn</a></li>
+    <li><a href="mailto:pgyanelli@protonmail.com">Email</a></li>
   </ul>
 </footer>
 
-<script>
-// ─── GSAP SETUP ───
-gsap.registerPlugin(ScrollTrigger);
-
-// ─── CURSOR ───
-const cursor = document.getElementById('cursor');
-const ring = document.getElementById('cursor-ring');
-let mx = 0, my = 0, rx = 0, ry = 0;
-
-document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
-
-function animCursor() {
-  cursor.style.left = mx + 'px';
-  cursor.style.top = my + 'px';
-  rx += (mx - rx) * 0.12;
-  ry += (my - ry) * 0.12;
-  ring.style.left = rx + 'px';
-  ring.style.top = ry + 'px';
-  requestAnimationFrame(animCursor);
-}
-animCursor();
-
-document.querySelectorAll('a, button, .product-card, #led-container, .btn-primary, .btn-secondary').forEach(el => {
-  el.addEventListener('mouseenter', () => document.body.classList.add('hovering'));
-  el.addEventListener('mouseleave', () => document.body.classList.remove('hovering'));
-});
-
-// ─── PROGRESS BAR ───
-const progressBar = document.getElementById('progress-bar');
-window.addEventListener('scroll', () => {
-  const pct = window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100;
-  progressBar.style.width = pct + '%';
-});
-
-// ─── LED INTERACTION ───
-let isLit = false;
-let scrollUnlocked = false;
-const ledContainer = document.getElementById('led-container');
-const ledBody = document.getElementById('led-body');
-const ledLens = document.getElementById('led-lens');
-const ledGlow = document.getElementById('led-glow');
-const scrollHint = document.getElementById('scroll-hint');
-const nav = document.getElementById('main-nav');
-
-// Lock scroll initially
-document.body.style.overflow = 'hidden';
-
-// Show ignition text after load
-gsap.fromTo('.ignition-text', { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 1.2, delay: 0.8, ease: 'power3.out' });
-gsap.fromTo('.ignition-sub', { opacity: 0 }, { opacity: 1, duration: 1, delay: 1.6 });
-
-// ─── BG FLASH OVERLAY ───
-const flashOverlay = document.createElement('div');
-flashOverlay.style.cssText = `
-  position: fixed; inset: 0; pointer-events: none; z-index: 50;
-  background: radial-gradient(ellipse at 50% 42%, #06b6d4 0%, #0891b2 18%, #0c4a6e 45%, transparent 75%);
-  opacity: 0;
-`;
-document.body.appendChild(flashOverlay);
-
-// Ripple rings canvas
-const rippleCanvas = document.createElement('canvas');
-rippleCanvas.style.cssText = 'position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:49;';
-document.body.appendChild(rippleCanvas);
-const rCtx = rippleCanvas.getContext('2d');
-rippleCanvas.width = window.innerWidth;
-rippleCanvas.height = window.innerHeight;
-window.addEventListener('resize', () => {
-  rippleCanvas.width = window.innerWidth;
-  rippleCanvas.height = window.innerHeight;
-});
-
-let ripples = [];
-function animateRipples() {
-  rCtx.clearRect(0, 0, rippleCanvas.width, rippleCanvas.height);
-  ripples = ripples.filter(r => r.alpha > 0.005);
-  for (const r of ripples) {
-    rCtx.beginPath();
-    rCtx.arc(r.x, r.y, r.radius, 0, Math.PI * 2);
-    rCtx.strokeStyle = `rgba(6,182,212,${r.alpha})`;
-    rCtx.lineWidth = r.width;
-    rCtx.stroke();
-    r.radius += r.speed;
-    r.alpha *= 0.94;
-    r.width *= 0.97;
-  }
-  if (ripples.length > 0) requestAnimationFrame(animateRipples);
-}
-
-ledContainer.addEventListener('click', () => {
-  if (isLit) return;
-  isLit = true;
-  ledContainer.classList.add('lit');
-
-  // Swap gradient fill
-  document.getElementById('ledBody').innerHTML = `
-    <stop offset="0%" stop-color="#67e8f9"/>
-    <stop offset="100%" stop-color="#06b6d4"/>`;
-
-  // Glow animation
-  gsap.to(ledGlow, { opacity: 1, duration: 0.3 });
-  gsap.to(ledGlow, { opacity: 0.7, duration: 1.5, repeat: -1, yoyo: true, ease: 'sine.inOut' });
-
-  // ── BACKGROUND FLASH ──
-  const ledRect = ledContainer.getBoundingClientRect();
-  const cx = ledRect.left + ledRect.width / 2;
-  const cy = ledRect.top + ledRect.height / 2;
-
-  // 1. Radial glow burst from LED center
-  gsap.timeline()
-    .to(flashOverlay, { opacity: 0.55, duration: 0.12, ease: 'power2.in' })
-    .to(flashOverlay, { opacity: 0.28, duration: 0.25, ease: 'power1.out' })
-    .to(flashOverlay, { opacity: 0.08, duration: 1.2, ease: 'power3.out' })
-    .to(flashOverlay, { opacity: 0.04, duration: 2, ease: 'sine.inOut', repeat: -1, yoyo: true });
-
-  // 2. Ripple rings emanating from the LED
-  const spawnRipple = (delay, speed, alpha) => {
-    setTimeout(() => {
-      ripples.push({ x: cx, y: cy, radius: 30, alpha, speed, width: 2.5 });
-      if (ripples.length === 1) animateRipples();
-    }, delay);
-  };
-  spawnRipple(0,   3.5, 0.9);
-  spawnRipple(120, 3.0, 0.7);
-  spawnRipple(260, 2.8, 0.55);
-  spawnRipple(420, 2.5, 0.4);
-  spawnRipple(600, 2.2, 0.3);
-  spawnRipple(850, 2.0, 0.2);
-
-  // 3. Section bg tint — ignition section gets a brief cyan wash
-  gsap.fromTo('#ignition',
-    { backgroundColor: 'rgba(6,182,212,0.12)' },
-    { backgroundColor: 'rgba(6,182,212,0)', duration: 2.5, ease: 'power2.out', delay: 0.1 }
-  );
-
-  // Unlock scroll after 1s
-  setTimeout(() => {
-    document.body.style.overflow = '';
-    scrollUnlocked = true;
-    scrollHint.classList.add('visible');
-    nav.classList.add('visible');
-  }, 900);
-});
-
-// ─── HELPER: gsap.fromTo wrapper ───
-function reveal(targets, trigger, from, toOpts, startPos) {
-  const els = typeof targets === 'string' ? gsap.utils.toArray(targets) : [targets];
-  els.forEach(el => {
-    const toVars = {
-      opacity: 1,
-      y: 0,
-      x: 0,
-      scale: 1,
-      duration: toOpts.duration || 0.9,
-      delay: toOpts.delay || 0,
-      ease: toOpts.ease || 'power3.out',
-      overwrite: 'auto',
-      scrollTrigger: {
-        trigger: trigger || el,
-        start: startPos || 'top 85%',
-        once: true,
-        toggleActions: 'play none none none'
-      }
-    };
-    // Only include scale in `to` if it was in `from`
-    if (from.scale === undefined) delete toVars.scale;
-    if (from.y === undefined) delete toVars.y;
-    if (from.x === undefined) delete toVars.x;
-    gsap.fromTo(el, { opacity: 0, ...from }, toVars);
-  });
-}
-
-// ── Spark section ──
-reveal('.sec-label', '#spark', { y: 24 }, { duration: 0.7 }, 'top 80%');
-reveal('.spark-heading', '#spark', { y: 40 }, { duration: 1 }, 'top 78%');
-gsap.utils.toArray('.spark-body').forEach((el, i) => {
-  reveal(el, '#spark', { y: 24 }, { duration: 0.8, delay: 0.15 + i * 0.15 }, 'top 75%');
-});
-reveal('.tech-tags', '#spark', { y: 24 }, { duration: 0.8, delay: 0.4 }, 'top 75%');
-reveal('.arduino-visual', '#spark', { x: 60 }, { duration: 1.2, delay: 0.2 }, 'top 75%');
-
-// ── Core section ──
-reveal('.core-heading', '#core', { y: 40 }, { duration: 1 }, 'top 78%');
-gsap.utils.toArray('.core-body').forEach((el, i) => {
-  reveal(el, '#core', { y: 24 }, { duration: 0.8, delay: 0.1 + i * 0.15 }, 'top 75%');
-});
-reveal('.stack-grid', '#core', { y: 24 }, { duration: 0.9, delay: 0.25 }, 'top 72%');
-reveal('.nodes-svg', '#core', { scale: 0.9 }, { duration: 1.2, delay: 0.2 }, 'top 75%');
-reveal('.stat-row', '.stat-row', { y: 24 }, { duration: 0.8 }, 'top 88%');
-
-// Stats counter
-document.querySelectorAll('.stat-num').forEach(el => {
-  const target = parseInt(el.dataset.target);
-  const suffix = el.dataset.suffix || (target === 5 ? '+' : '');
-  ScrollTrigger.create({
-    trigger: el,
-    start: 'top 88%',
-    once: true,
-    onEnter: () => {
-      const obj = { val: 0 };
-      gsap.to(obj, {
-        val: target,
-        duration: 1.5,
-        ease: 'power2.out',
-        onUpdate: () => { el.textContent = Math.round(obj.val) + suffix; }
-      });
-    }
-  });
-});
-
-// ── Vision section ──
-reveal('.vision-heading', '#vision', { y: 40 }, { duration: 1 }, 'top 78%');
-gsap.utils.toArray('.vision-body').forEach((el, i) => {
-  reveal(el, '#vision', { y: 24 }, { duration: 0.8, delay: 0.1 + i * 0.12 }, 'top 75%');
-});
-reveal('.vision-pillars', '#vision', { y: 24 }, { duration: 1, delay: 0.3 }, 'top 72%');
-
-// ── Impact section ──
-reveal('.impact-heading', '#impact', { y: 40 }, { duration: 1 }, 'top 78%');
-reveal('.impact-sub', '#impact', { y: 24 }, { duration: 0.8, delay: 0.2 }, 'top 75%');
-gsap.utils.toArray('.product-card').forEach((el, i) => {
-  reveal(el, '.products-grid', { y: 50 }, { duration: 0.9, delay: i * 0.18 }, 'top 82%');
-});
-
-// ── Human section ──
-[
-  ['.human-eyebrow', 0],
-  ['.human-heading', 0.1],
-  ['.human-body', 0.2],
-  ['.human-traits', 0.3],
-  ['.cta-block', 0.4]
-].forEach(([cls, delay]) => {
-  const el = document.querySelector(cls);
-  if (el) reveal(el, '#human', { y: 30 }, { duration: 0.9, delay }, 'top 78%');
-});
-
-// ── Work section ──
-reveal('.work-heading', '#work', { y: 40 }, { duration: 1 }, 'top 78%');
-reveal('.work-sub', '#work', { y: 24 }, { duration: 0.8, delay: 0.15 }, 'top 75%');
-
-gsap.utils.toArray('.tl-item').forEach((item, i) => {
-  // Dot
-  gsap.fromTo(item.querySelector('.tl-dot'),
-    { scale: 0, opacity: 0 },
-    { scale: 1, opacity: 1, duration: 0.5, delay: 0.1,
-      scrollTrigger: { trigger: item, start: 'top 85%', once: true } }
-  );
-  // Line
-  const line = item.querySelector('.tl-line');
-  if (line) {
-    gsap.fromTo(line,
-      { scaleY: 0, transformOrigin: 'top' },
-      { scaleY: 1, duration: 0.8, delay: 0.3, ease: 'power2.out',
-        scrollTrigger: { trigger: item, start: 'top 82%', once: true } }
-    );
-  }
-  // Content block
-  gsap.fromTo(item.querySelector('.tl-content'),
-    { opacity: 0, x: 20 },
-    { opacity: 1, x: 0, duration: 0.9, delay: 0.15, ease: 'power3.out',
-      scrollTrigger: { trigger: item, start: 'top 83%', once: true } }
-  );
-  // Achievement cards stagger
-  gsap.utils.toArray(item.querySelectorAll('.achievement')).forEach((ach, j) => {
-    gsap.fromTo(ach,
-      { opacity: 0, y: 20 },
-      { opacity: 1, y: 0, duration: 0.6, delay: 0.3 + j * 0.1, ease: 'power2.out',
-        scrollTrigger: { trigger: item, start: 'top 80%', once: true } }
-    );
-  });
-});
-
-
-ScrollTrigger.create({
-  trigger: '#core',
-  start: 'top 70%',
-  once: true,
-  onEnter: () => {
-    document.querySelectorAll('.node-conn').forEach((path, i) => {
-      const len = path.getTotalLength?.() || 200;
-      path.style.strokeDasharray = len;
-      path.style.strokeDashoffset = len;
-      gsap.to(path, {
-        strokeDashoffset: 0,
-        duration: 0.8,
-        delay: i * 0.08,
-        ease: 'power2.inOut'
-      });
-    });
-  }
-});
-
-// ─── HORIZONTAL SCROLLING LETTER EFFECT on heading ───
-gsap.to('.sec-year', {
-  scrollTrigger: {
-    trigger: '#spark',
-    start: 'top bottom',
-    end: 'bottom top',
-    scrub: true
-  },
-  y: -60
-});
-
-// ─── FLOATING PARTICLES ───
-const canvas = document.createElement('canvas');
-canvas.style.cssText = 'position:fixed;top:0;left:0;pointer-events:none;z-index:2;opacity:0.35;';
-document.body.prepend(canvas);
-const ctx = canvas.getContext('2d');
-let W, H;
-const particles = [];
-
-function resizeCanvas() {
-  W = canvas.width = window.innerWidth;
-  H = canvas.height = window.innerHeight;
-}
-resizeCanvas();
-window.addEventListener('resize', resizeCanvas);
-
-for (let i = 0; i < 60; i++) {
-  particles.push({
-    x: Math.random() * window.innerWidth,
-    y: Math.random() * window.innerHeight,
-    r: Math.random() * 1.2 + 0.3,
-    vx: (Math.random() - 0.5) * 0.3,
-    vy: (Math.random() - 0.5) * 0.3,
-    a: Math.random() * 0.6 + 0.2
-  });
-}
-
-function drawParticles() {
-  ctx.clearRect(0, 0, W, H);
-  for (const p of particles) {
-    p.x += p.vx;
-    p.y += p.vy;
-    if (p.x < 0) p.x = W;
-    if (p.x > W) p.x = 0;
-    if (p.y < 0) p.y = H;
-    if (p.y > H) p.y = 0;
-    ctx.beginPath();
-    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-    ctx.fillStyle = `rgba(6,182,212,${p.a})`;
-    ctx.fill();
-  }
-  requestAnimationFrame(drawParticles);
-}
-drawParticles();
-
-// ─── SMOOTH ANCHOR SCROLL ───
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-  link.addEventListener('click', e => {
-    e.preventDefault();
-    const target = document.querySelector(link.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  });
-});
-
-// ─── HIDE SCROLL HINT ON SCROLL ───
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 50) scrollHint.classList.remove('visible');
-}, { passive: true });
-
-// ─── MOBILE MENU ───
-const navToggle = document.getElementById('nav-toggle');
-const mobileMenu = document.getElementById('mobile-menu');
-const mobileLinks = mobileMenu.querySelectorAll('a');
- 
-function openMenu() {
-  navToggle.classList.add('open');
-  mobileMenu.classList.add('open');
-  document.body.style.overflow = 'hidden';
-  // Stagger links in
-  mobileLinks.forEach((link, i) => {
-    link.style.transition = `opacity 0.35s ease ${0.08 + i * 0.06}s, transform 0.35s ease ${0.08 + i * 0.06}s`;
-  });
-}
- 
-function closeMenu() {
-  navToggle.classList.remove('open');
-  mobileMenu.classList.remove('open');
-  if (scrollUnlocked) document.body.style.overflow = '';
-}
- 
-navToggle.addEventListener('click', () => {
-  navToggle.classList.contains('open') ? closeMenu() : openMenu();
-});
- 
-mobileLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    closeMenu();
-    const target = document.querySelector(link.getAttribute('href'));
-    if (target) setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 320);
-  });
-});
- 
-// Close on backdrop click
-mobileMenu.addEventListener('click', e => { if (e.target === mobileMenu) closeMenu(); });
- 
-// ─── BACK TO TOP ───
-const backToTop = document.getElementById('back-to-top');
- 
-window.addEventListener('scroll', () => {
-  const pct = window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100;
-  progressBar.style.width = pct + '%';
- 
-  // Show back-to-top after 20% scroll
-  if (window.scrollY > window.innerHeight * 0.4) {
-    backToTop.classList.add('visible');
-  } else {
-    backToTop.classList.remove('visible');
-  }
- 
-  if (window.scrollY > 50) scrollHint.classList.remove('visible');
-}, { passive: true });
- 
-backToTop.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
- 
-</script>
+<script src="./js/main.js"></script>
 </body>
 </html>
