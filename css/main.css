@@ -7,7 +7,7 @@
     --cyan-glow: rgba(6, 182, 212, 0.4);
     --cyan-faint: rgba(6, 182, 212, 0.08);
     --white: #f0f9ff;
-    --muted: #64748b;
+    --muted: rgb(100, 116, 139);
     --text: #94a3b8;
     --serif: 'DM Serif Display', Georgia, serif;
     --mono: 'DM Mono', 'Courier New', monospace;
@@ -24,6 +24,16 @@
     font-family: var(--mono);
     overflow-x: hidden;
     cursor: none;
+  }
+
+  @media (pointer: fine) {
+    body { cursor: none; }
+    #cursor, #cursor-ring { display: block; }
+  }
+
+  @media (pointer: coarse) {
+    #cursor, #cursor-ring { display: none; }
+    body { cursor: auto; }
   }
 
   /* ─── CUSTOM CURSOR ─── */
@@ -84,15 +94,39 @@
     -webkit-backdrop-filter: blur(12px);
   }
   nav.visible { opacity: 1; pointer-events: all; }
+
   .nav-logo {
-    font-family: var(--cond);
-    font-size: 13px;
-    font-weight: 300;
-    letter-spacing: 0.3em;
-    color: var(--cyan);
-    text-transform: uppercase;
-    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Espacio entre imagen y texto */
+    font-family: 'Fira Code', monospace;
+    font-weight: 700;
+    letter-spacing: -1px;
   }
+
+  .logo-img {
+    height: 38px; /* Altura controlada para que no rompa el nav */
+    width: auto;
+    object-fit: contain;
+    
+    filter: drop-shadow(0 0 8px rgba(6, 182, 212, 0.4)); 
+    transition: transform 0.3s ease;
+  }
+
+  .nav-logo:hover .logo-img {
+    transform: rotate(-5deg) scale(1.1); /* Un pequeño guiño juguetón */
+  }
+
+  .logo-text {
+    color: #ffffff;
+    font-size: 1.1rem;
+  }
+
+  .text-cyan {
+    color: #06b6d4; /* Tu cyan de IoTechLabs */
+    text-shadow: 0 0 10px rgba(6, 182, 212, 0.5);
+  }
+
   .nav-links {
     display: flex;
     gap: 36px;
@@ -100,8 +134,8 @@
   }
   .nav-links a {
     font-family: var(--cond);
-    font-size: 11px;
-    font-weight: 300;
+    font-size: 15px;
+    font-weight: bold;
     letter-spacing: 0.25em;
     text-transform: uppercase;
     color: var(--muted);
@@ -272,8 +306,8 @@
   }
   .ignition-label {
     font-family: var(--cond);
-    font-size: 11px;
-    font-weight: 300;
+    font-size: 15px;
+    font-weight: bold;
     letter-spacing: 0.5em;
     text-transform: uppercase;
     color: var(--muted);
@@ -289,8 +323,8 @@
   }
   .ignition-sub {
     font-family: var(--cond);
-    font-size: 12px;
-    font-weight: 300;
+    font-size: 13.5px;
+    font-weight: bold;
     letter-spacing: 0.4em;
     text-transform: uppercase;
     color: var(--muted);
@@ -317,7 +351,7 @@
     50% { opacity: 0; r: 46; }
   }
   #led-container.lit #led-body { fill: #06b6d4; }
-  #led-container.lit #led-lens { fill: #a5f3fc; }
+  #led-container.lit #led-lens { fill: #a5fcbe; }
   #led-container.lit #led-glow { opacity: 1; }
   #led-glow { opacity: 0; transition: opacity 0.6s; }
 
@@ -364,7 +398,7 @@
   }
   .cable-base {
     fill: none;
-    stroke: #1e293b;
+    stroke: #0f2a1b;
     stroke-width: 1.5;
   }
   .cable-light {
@@ -378,7 +412,7 @@
   /* ─── SECTION LABELS ─── */
   .sec-label {
     font-family: var(--cond);
-    font-size: 10px;
+    font-size: 17px;
     font-weight: 300;
     letter-spacing: 0.6em;
     text-transform: uppercase;
@@ -401,6 +435,9 @@
 
   /* ─── SECTION 1: THE SPARK ─── */
   #spark {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
     background: linear-gradient(135deg, var(--abyss) 0%, var(--deep) 100%);
   }
   .spark-content { max-width: 600px; position: relative; z-index: 2; }
@@ -446,13 +483,89 @@
     pointer-events: none;
   }
 
-  /* Arduino SVG illustration */
-  .arduino-visual {
+  .arduino-photos {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (min-width: 1024px) {
+    #spark { flex-direction: row; align-items: center; justify-content: space-between; }
+    .spark-content { max-width: 50%; }
+    .arduino-photos { position: absolute; right: 15%; top: 50%; width: 300px; margin-top: 0; }
+  }
+
+
+
+  .photo-container {
     position: absolute;
-    right: 8vw;
-    top: 50%;
-    transform: translateY(-50%);
-    width: clamp(200px, 30vw, 380px);
+    border: 1px solid #06b6d4; /* El Cyan de IoTechLabs */
+    padding: 5px;
+    background: #020617;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .main-photo {
+    width: 400px;
+    z-index: 2;
+    transform: rotate(-2deg);
+  }
+
+  .sub-photo {
+    width: 320px;
+    z-index: 1;
+    transform: translate(230px, 80px) rotate(4deg);
+  }
+
+  @media (min-width: 768px) {
+    .main-photo { width: 350px; }
+    .sub-photo { width: 280px; transform: translate(150px, 80px) rotate(4deg); }
+  }
+
+  @media (max-width: 425px) {
+    .main-photo { width: 300px; }
+    .sub-photo { display: none; }
+  }
+
+  .photo-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: saturate(0.8) contrast(1.1); /* Estética técnica */
+  }
+
+  /* El label tipo 'ficha técnica' */
+  .photo-label {
+    display: block;
+    font-family: 'Fira Code', monospace;
+    font-size: 12px;
+    color: #06b6d4;
+    margin-top: 5px;
+    text-align: right;
+    letter-spacing: 1px;
+  }
+
+  /* Efecto hover interactivo */
+  .arduino-photos:hover .main-photo {
+    transform: rotate(0deg) scale(1.05);
+    z-index: 3;
+  }
+
+  .arduino-photos:hover .sub-photo {
+    transform: translate(300px, 60px) rotate(0deg) scale(1.05);
+  }
+
+  /* Overlay sutil para que parezca una pantalla o luz de laboratorio */
+  .photo-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(45deg, rgba(6, 182, 212, 0.1) 0%, transparent 100%);
+    pointer-events: none;
   }
 
   /* ─── SECTION 2: THE CORE ─── */
@@ -474,7 +587,7 @@
     margin-bottom: 28px;
   }
   .core-body {
-    font-size: 13px;
+    font-size: 15px;
     line-height: 1.9;
     color: var(--text);
     margin-bottom: 36px;
@@ -497,7 +610,7 @@
   }
   .stack-name {
     font-family: var(--cond);
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 600;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -506,7 +619,7 @@
   }
   .stack-desc {
     font-family: var(--cond);
-    font-size: 11px;
+    font-size: 14px;
     color: var(--muted);
     font-weight: 300;
   }
@@ -577,7 +690,7 @@
     margin-bottom: 16px;
   }
   .work-sub {
-    font-size: 13px;
+    font-size: 15px;
     color: var(--text);
     max-width: 520px;
   }
@@ -651,15 +764,15 @@
   }
   .tl-role {
     font-family: var(--serif);
-    font-size: clamp(18px, 2.2vw, 26px);
+    font-size: clamp(30px, 2.2vw, 40px);
     color: var(--white);
     line-height: 1.2;
     margin-bottom: 6px;
   }
   .tl-company {
     font-family: var(--cond);
-    font-size: 12px;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: bolder;
     letter-spacing: 0.25em;
     text-transform: uppercase;
     color: var(--cyan);
@@ -669,8 +782,8 @@
   }
   .tl-badge {
     font-family: var(--cond);
-    font-size: 9px;
-    font-weight: 400;
+    font-size: 12px;
+    font-weight: bolder;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     padding: 3px 8px;
@@ -680,14 +793,14 @@
   }
   .tl-period {
     font-family: var(--mono);
-    font-size: 11px;
+    font-size: 18px;
     color: var(--muted);
     white-space: nowrap;
     padding-top: 4px;
     flex-shrink: 0;
   }
   .tl-body {
-    font-size: 13px;
+    font-size: 16px;
     line-height: 1.85;
     color: var(--text);
     margin-bottom: 28px;
@@ -718,9 +831,10 @@
     background: var(--cyan);
   }
   .achievement:hover { border-color: rgba(6,182,212,0.5); }
+
   .ach-metric {
     font-family: var(--cond);
-    font-size: clamp(22px, 3vw, 32px);
+    font-size: clamp(30px, 3vw, 40px);
     font-weight: 700;
     color: var(--cyan);
     line-height: 1;
@@ -728,7 +842,7 @@
   }
   .ach-desc {
     font-family: var(--cond);
-    font-size: 11px;
+    font-size: 18px;
     font-weight: 300;
     color: var(--text);
     line-height: 1.5;
@@ -742,7 +856,7 @@
     margin-bottom: 24px;
   }
   .tl-bullet {
-    font-size: 13px;
+    font-size: 15px;
     line-height: 1.7;
     color: var(--text);
     padding-left: 4px;
@@ -775,7 +889,7 @@
     margin-bottom: 28px;
   }
   .vision-body {
-    font-size: 13px;
+    font-size: 15px;
     line-height: 1.9;
     color: var(--text);
     margin-bottom: 36px;
@@ -800,7 +914,7 @@
   }
   .pillar-title {
     font-family: var(--cond);
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 600;
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -808,7 +922,7 @@
     margin-bottom: 6px;
   }
   .pillar-desc {
-    font-size: 12px;
+    font-size: 13px;
     line-height: 1.7;
     color: var(--text);
   }
@@ -841,7 +955,7 @@
     margin-bottom: 16px;
   }
   .impact-sub {
-    font-size: 13px;
+    font-size: 15px;
     color: var(--text);
   }
   .products-grid {
@@ -872,7 +986,7 @@
   .product-card:hover .product-num { color: var(--cyan); }
   .product-num {
     font-family: var(--cond);
-    font-size: 11px;
+    font-size: 14px;
     letter-spacing: 0.4em;
     text-transform: uppercase;
     color: var(--muted);
@@ -887,7 +1001,7 @@
   }
   .product-type {
     font-family: var(--cond);
-    font-size: 10px;
+    font-size: 15px;
     font-weight: 600;
     letter-spacing: 0.35em;
     text-transform: uppercase;
@@ -895,7 +1009,7 @@
     margin-bottom: 20px;
   }
   .product-desc {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.8;
     color: var(--text);
     margin-bottom: 32px;
@@ -907,7 +1021,7 @@
   }
   .p-tag {
     font-family: var(--cond);
-    font-size: 10px;
+    font-size: 13px;
     font-weight: 600;
     letter-spacing: 0.15em;
     text-transform: uppercase;
@@ -938,7 +1052,7 @@
   .human-inner { max-width: 680px; margin: 0 auto; }
   .human-eyebrow {
     font-family: var(--cond);
-    font-size: 11px;
+    font-size: 14px;
     font-weight: 300;
     letter-spacing: 0.5em;
     text-transform: uppercase;
@@ -991,8 +1105,8 @@
   .cta-block { }
   .cta-label {
     font-family: var(--cond);
-    font-size: 11px;
-    font-weight: 300;
+    font-size: 19px;
+    font-weight: bolder;
     letter-spacing: 0.4em;
     text-transform: uppercase;
     color: var(--muted);
@@ -1019,7 +1133,7 @@
     background: var(--cyan);
     color: var(--abyss);
     font-family: var(--cond);
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 700;
     letter-spacing: 0.3em;
     text-transform: uppercase;
@@ -1043,7 +1157,7 @@
     background: transparent;
     color: var(--cyan);
     font-family: var(--cond);
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 700;
     letter-spacing: 0.3em;
     text-transform: uppercase;
@@ -1058,6 +1172,44 @@
     transform: translateY(-2px);
   }
 
+  /* Media query para dispositivos móviles (hasta 768px) */
+  @media (max-width: 768px) {
+    .btn-primary,
+    .btn-secondary {
+      /* Opcional pero recomendado: ocupan el 100% del ancho en móviles */
+      width: 100%;
+      justify-content: center;
+      
+      /* Reducimos ligeramente el tamaño de fuente y el espaciado para evitar desbordes */
+      font-size: 14px;
+      letter-spacing: 0.2em;
+    }
+
+    .btn-primary {
+      /* Reducimos el padding */
+      padding: 14px 24px;
+    }
+
+    .btn-secondary {
+      /* 1px menos de padding que el primary para compensar el borde (border: 1px) */
+      padding: 13px 24px; 
+    }
+  }
+
+  /* Media query para pantallas extra chicas (hasta 480px) - Opcional */
+  @media (max-width: 480px) {
+    .btn-primary,
+    .btn-secondary {
+      padding: 12px 16px;
+      font-size: 13px;
+      letter-spacing: 0.15em;
+    }
+    
+    .btn-secondary {
+      padding: 11px 16px;
+    }
+  }
+
   /* ─── FOOTER ─── */
   footer {
     background: var(--abyss);
@@ -1069,8 +1221,8 @@
   }
   .footer-left {
     font-family: var(--cond);
-    font-size: 11px;
-    font-weight: 300;
+    font-size: 14px;
+    font-weight: bold;
     letter-spacing: 0.3em;
     color: var(--muted);
   }
@@ -1081,7 +1233,7 @@
   }
   .footer-right a {
     font-family: var(--cond);
-    font-size: 11px;
+    font-size: 14px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--muted);
